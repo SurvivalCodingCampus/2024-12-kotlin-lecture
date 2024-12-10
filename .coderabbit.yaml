@@ -1,22 +1,20 @@
 # yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
+language: "ko"
+early_access: false
 
 reviews:
-  max_comments_per_review: 10
-  style: educational
-  strictness: medium
-  praise: true
-  language: ko
+  profile: "chill"
+    request_changes_workflow: false
+    high_level_summary: true
+    poem: false
+    review_status: true
+    collapse_walkthrough: false
+    auto_review:
+      enabled: true
+      drafts: false
+  chat:
+    auto_reply: true
   
-  # 파일 패턴 제외
-  path_patterns:
-    - "!*.md"
-    - "!docs/*"
-    - "!test/*"
-  
-  # 특정 브랜치 제외
-  branch_patterns:
-    - "!master"
-
   # 코드 스타일 규칙
   rules:
     style:
