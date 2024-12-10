@@ -15,24 +15,3 @@ reviews:
     drafts: false
   chat:
     auto_reply: true
-  
-  # 코드 스타일 규칙
-  rules:
-    style:
-      indent: 
-        enabled: true
-        size: 4
-      whitespace:
-        enabled: true
-      spacing:
-        control_structures:
-          before_parentheses: true
-          within_parentheses: false
-
-  # 코드 품질 관련 규칙
-  categories:
-    - code_style
-    - best_practices
-    - potential_bugs
-    - naming
-    - readability
