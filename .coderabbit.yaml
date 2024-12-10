@@ -1,50 +1,39 @@
-reviews:
-  # PR 당 최대 코멘트 수
-  max_comments_per_review: 10
-  
-  # 리뷰 스타일
-  style: educational   # 교육적인 톤으로 설명
-  
-  # 코드 품질 체크 수준
-  strictness: medium   # 너무 엄격하지 않게
-  
-  # 긍정적인 피드백도 포함
-  praise: true
-  
-  # 한국어로 피드백
-  language: ko
+# yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
 
+reviews:
+  max_comments_per_review: 10
+  style: educational
+  strictness: medium
+  praise: true
+  language: ko
+  
+  # 파일 패턴 제외
+  path_patterns:
+    - "!*.md"
+    - "!docs/*"
+    - "!test/*"
+  
+  # 특정 브랜치 제외
+  branch_patterns:
+    - "!master"
+
+  # 코드 스타일 규칙
   rules:
     style:
-      indent: 
-        enabled: true    # 들여쓰기 검사 활성화
-        size: 4         # 들여쓰기 크기 지정
+      indent:
+        enabled: true
+        size: 4
       whitespace:
-        enabled: true    # 공백 검사 활성화
-      rules:
-          control_structures:  # if, for, while 등의 제어문
-            before_parentheses: true  # 괄호 전 공백 필수
-            within_parentheses: false # 괄호 안쪽 공백 불필요
+        enabled: true
+      spacing:
+        control_structures:
+          before_parentheses: true
+          within_parentheses: false
 
-# 집중적으로 봐야 할 부분
-focus:
-  - code_style
-  - best_practices
-  - potential_bugs
-  - naming
-  - readability
-
-# 무시할 이슈들
-ignore:
-  - "불필요한 공백"
-  - "한 줄이 너무 김"
-  
-# 특정 파일/폴더 제외
-exclude:
-  - "*.md"
-  - "docs/*"
-  - "test/*"
-
-# 리뷰 제외 브랜치
-exclude_branches:
-  - master
+  # 코드 품질 관련 규칙
+  categories:
+    - code_style
+    - best_practices
+    - potential_bugs
+    - naming
+    - readability
