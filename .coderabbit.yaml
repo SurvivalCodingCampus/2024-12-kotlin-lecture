@@ -1,0 +1,38 @@
+reviews:
+  # PR 당 최대 코멘트 수
+  max_comments_per_review: 10
+  
+  # 리뷰 스타일
+  style: educational   # 교육적인 톤으로 설명
+  
+  # 코드 품질 체크 수준
+  strictness: medium   # 너무 엄격하지 않게
+  
+  # 긍정적인 피드백도 포함
+  praise: true
+  
+  # 한국어로 피드백
+  language: ko
+
+# 집중적으로 봐야 할 부분
+focus:
+  - code_style
+  - best_practices
+  - potential_bugs
+  - naming
+  - readability
+
+# 무시할 이슈들
+ignore:
+  - "불필요한 공백"
+  - "한 줄이 너무 김"
+  
+# 특정 파일/폴더 제외
+exclude:
+  - "*.md"
+  - "docs/*"
+  - "test/*"
+
+# 리뷰 제외 브랜치
+exclude_branches:
+  - master
