@@ -14,6 +14,18 @@ reviews:
   # 한국어로 피드백
   language: ko
 
+  rules:
+    style:
+      indent: 
+        enabled: true    # 들여쓰기 검사 활성화
+        size: 4         # 들여쓰기 크기 지정
+      whitespace:
+        enabled: true    # 공백 검사 활성화
+      rules:
+          control_structures:  # if, for, while 등의 제어문
+            before_parentheses: true  # 괄호 전 공백 필수
+            within_parentheses: false # 괄호 안쪽 공백 불필요
+
 # 집중적으로 봐야 할 부분
 focus:
   - code_style
